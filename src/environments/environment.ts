@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiLogin: 'https://ies-webcontent.com.mx',
+  apiSelect: 'https://api.first.org/data/v1/countries?region=africa&limit=10&pretty=true'
 };
 
 /*

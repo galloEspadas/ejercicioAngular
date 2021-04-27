@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Dashboard</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <a><p (click)="inicio()"> Dashboard </p></a>
+      <a><p (click)="componente()"> Componente 1 </p></a>
+      <a><p (click)="salir()"> Logout </p></a>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button>
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>

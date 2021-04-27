@@ -1,0 +1,36 @@
+<mat-toolbar>
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Componente</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <a><p (click)="inicio()"> Dashboard </p></a>
+      <a><p (click)="componente()"> Componente 1 </p></a>
+      <a><p (click)="salir()"> Logout </p></a>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        <form [formGroup]="compForm" class="example-form">
+            <mat-card-content>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="value" formControlName="value">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="name" formControlName="name">
+              </mat-form-field>
+            </mat-card-content>
+            <button mat-raised-button class="btn-block" color="primary" (ngSubmit)="submit()">Agregar</button>
+            <button mat-raised-button class="btn-block" color="primary" (ngSubmit)="submit2()">cambiar Original</button>
+          </form>
+    </div>
+  
+  </mat-drawer-container>
